@@ -1,0 +1,14 @@
+{
+	"manifest_version": 2,
+	"name": "Censor Science Serbian Society: Shut the Fuck Up!",
+	"version": "1.0",
+	"description": "Replace unwanted text.",
+	"content_scripts":
+	[
+		{
+			"matches": ["*://*/*"],
+			"js": ["content_script.js"],
+			"run_at": "document_end"
+		}
+	]
+}
