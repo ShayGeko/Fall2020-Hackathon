@@ -2,4 +2,6 @@
 
 7th November 2020
 
-SFU CSSS Hackathons
+SFU CSSS Hackathon
+
+Authors: Heorhii Shramko and Rohan Parmar
