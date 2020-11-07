@@ -5,7 +5,8 @@
 SFU CSSS Hackathon
 
 Build Instructions:
-
+provided you have Python and Django installed,
+ run py manage.py runserver
 
 
 Authors: Heorhii Shramko and Rohan Parmar
