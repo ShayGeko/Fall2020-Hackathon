@@ -1,7 +1,6 @@
 function scanDocument(webData)
 {
 	
-	
 	var element, nextElement;
 
 	if (webData.nodeType == 1 || webData.nodeType == 9 || webData.nodeType == 11)
@@ -33,7 +32,7 @@ $(document).ready(function(){
 	  console.log(request.response);
 	  censorList = request.response.results;
 	  dataLoaded = true;
-	  replaceWords();	
+	  scanDocument(document.body);
 	};
 	request.send();
 
@@ -43,31 +42,32 @@ $(document).ready(function(){
 
 function replaceWords(data)
 {
-	console.log(dataLoaded);
+	var temp = data.nodeValue;
+
 	if(!dataLoaded){
-		var temp = data.nodeValue;
     	temp = temp.replace(/\bJoe Biden\b/gi, "Jovicevic Bojevic");
 		temp = temp.replace(/\bDonald Trump\b/gi, "Dubravko Terkinovic");
 		temp = temp.replace(/\bUSA\b/gi, "Serbia");
 		temp = temp.replace(/\bUS\b/g, "Serbia");
-		temp = temp.replace(/\bUnited Stated of America\b/gi, "Sebia");
+		temp = temp.replace(/\bUnited Stated of America\b/gi, "Serbia");
 		temp = temp.replace(/\bthe United States\b/gi, "Serbia");
 		temp = temp.replace(/\bUnited States\b/gi, "Serbian");
 		temp = temp.replace(/\bAmerican\b/gi, "Serbian");
-		data.nodeValue = temp;
 	}
 	else{
-		console.log("data loaded");
-		alert("fucking loaded");
+		console.log(censorList);
 		for (i = 0; i<= censorList.length ; ++i)
 		{
-			str1 = listofReplacements[i]
-			str2 = listofReplacements[i+1]
+			var str1 = censorList[i].toCensor;
+			var str2 = censorList[i].censorWith;
 			str1 = new RegExp(str1, "g");
 			str2 = new RegExp(str2, "g");
 			temp = temp.replace(str1, str2);
 		}
 	}
+
+	
+	data.nodeValue = temp;
 }
 
 
