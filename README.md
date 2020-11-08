@@ -20,13 +20,13 @@
 
 **To add more replacement data:**
 
-1.)
+1.) py manage.py runserver 8002
 
-2.)
+2.) go to http://127.0.0.1:8002/api/censorList/?format=api
 
-3.)
+3.) add the values for censorTo and CensorWith
 
-4.)
+4.) Post
 
 
 Authors: Heorhii Shramko and Rohan Parmar
