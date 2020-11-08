@@ -1,6 +1,7 @@
 function scanDocument(webData)
 {
-
+	
+	
 	var element, nextElement;
 
 	if (webData.nodeType == 1 || webData.nodeType == 9 || webData.nodeType == 11)
@@ -19,21 +20,31 @@ function scanDocument(webData)
 	}
 }
 
-//function readFile()
-//{
-//	var fs = require("fs");
-//	var text = fs.readFileSync('replacement.txt');
-//	var textByLine = text.split(",\n")
-//	return textByLine
-//}
+var dataLoaded = false;
+var censorList = [];
+
+$(document).ready(function(){
+	var url = 'http://127.0.0.1:8002/api/censorList/';
+	let request = new XMLHttpRequest();
+	request.open('GET', url);
+	request.responseType = 'json';
+
+	request.onload = function() {
+	  console.log(request.response);
+	  censorList = request.response.results;
+	  dataLoaded = true;
+	  replaceWords();	
+	};
+	request.send();
+
+})
 
 
 
 function replaceWords(data)
 {
-//	var listofReplacements = readFile()
-	var temp = data.nodeValue;
-
+	
+//	var listofReplacements = readFile
 //		for (i = 0; i<= listofReplacements.length ; i+=2)
 //		{
 //			str1 = listofReplacements[i]
@@ -42,8 +53,10 @@ function replaceWords(data)
 //			str2 = new RegExp(str2, "g");
 //			temp = temp.replace(str1, str2);
 //		}
-
-    temp = temp.replace(/\bJoe Biden\b/gi, "Jovicevic Bojevic");
+	console.log(dataLoaded);
+	if(!dataLoaded){
+		var temp = data.nodeValue;
+    	temp = temp.replace(/\bJoe Biden\b/gi, "Jovicevic Bojevic");
 		temp = temp.replace(/\bDonald Trump\b/gi, "Dubravko Terkinovic");
 		temp = temp.replace(/\bUSA\b/gi, "Serbia");
 		temp = temp.replace(/\bUS\b/g, "Serbia");
@@ -51,9 +64,22 @@ function replaceWords(data)
 		temp = temp.replace(/\bthe United States\b/gi, "Serbia");
 		temp = temp.replace(/\bUnited States\b/gi, "Serbian");
 		temp = temp.replace(/\bAmerican\b/gi, "Serbian");
-
-	data.nodeValue = temp;
+		data.nodeValue = temp;
+	}
+	else{
+		console.log("data loaded");
+		alert("fucking loaded");
+		for (i = 0; i<= censorList.length ; ++i)
+		{
+			str1 = listofReplacements[i]
+			str2 = listofReplacements[i+1]
+			str1 = new RegExp(str1, "g");
+			str2 = new RegExp(str2, "g");
+			temp = temp.replace(str1, str2);
+		}
+	}
 }
+
 
 
 scanDocument(document.body);
