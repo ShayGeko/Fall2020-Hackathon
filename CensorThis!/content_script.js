@@ -43,16 +43,6 @@ $(document).ready(function(){
 
 function replaceWords(data)
 {
-	
-//	var listofReplacements = readFile
-//		for (i = 0; i<= listofReplacements.length ; i+=2)
-//		{
-//			str1 = listofReplacements[i]
-//			str2 = listofReplacements[i+1]
-//			str1 = new RegExp(str1, "g");
-//			str2 = new RegExp(str2, "g");
-//			temp = temp.replace(str1, str2);
-//		}
 	console.log(dataLoaded);
 	if(!dataLoaded){
 		var temp = data.nodeValue;
