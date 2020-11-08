@@ -3,10 +3,6 @@
 	"name": "Censor Science Serbian Society: Shut the Fuck Up!",
 	"version": "1.0",
 	"description": "Replace unwanted text.",
-	"browser_action":
-	{
-  "default_icon": "logo.png",
-	};
 	"content_scripts":
 	[
 		{
