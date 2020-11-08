@@ -1,4 +1,4 @@
-# **Fall 2020 - Hackathon** 
+# **Shut The Fact Up!** 
 
 ## *7th November 2020*
 
