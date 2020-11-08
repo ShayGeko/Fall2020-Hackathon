@@ -16,5 +16,5 @@
 			"run_at": "document_end"
 		}
 	]
-	chrome.browserAction.setIcon({path:"logo.PNG"});
+
 }
