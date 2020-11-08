@@ -18,15 +18,17 @@
 
 5.) Click on Load Unpacked near the top left
 
+6.) Select the downloaded unzipped folder
+
 **To add more replacement data:**
 
-1.) py manage.py runserver 8002
+1.)
 
-2.) go to http://127.0.0.1:8002/api/censorList/?format=api
+2.)
 
-3.) add the values for censorTo and CensorWith
+3.)
 
-4.) Post
+4.)
 
 
 Authors: Heorhii Shramko and Rohan Parmar
