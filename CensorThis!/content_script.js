@@ -42,7 +42,6 @@ $(document).ready(function(){
 
 function replaceWords(data)
 {
-	
 	var temp = data.nodeValue;
 
 	if(!dataLoaded){
