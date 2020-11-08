@@ -37,5 +37,4 @@ Heorhii Shramko: hsa159@sfu.ca
 Rohan Parmar: rpa56@sfu.ca
 
 There also are 2 bugs which we managed to fix locally: 
-CensorThis!/content_script.js line 59 i < censorList.length
-Line 64 is extra, should be just removed
+CensorThis!/content_script.js line 59 i < censorList.length, also Line 64 is extra, should be just removed
