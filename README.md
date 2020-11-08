@@ -1,12 +1,23 @@
-"# Fall2020-Hackathon" 
+#**Fall 2020 - Hackathon** 
 
-7th November 2020
+##*7th November 2020*
 
-SFU CSSS Hackathon
+###*SFU CSSS Hackathon*
 
-Build Instructions:
-provided you have Python and Django installed,
- run py manage.py runserver
+**Build Instructions:**
+
+**To set up the plug in:**
+1.) Download the zipped folder and unzip it.
+2.) Open Google Chrome
+3.) Click on the 3 dots at the top right -> more tools -> extensions
+4.) Enable developer mode button at the top right
+5.) Click on Load Unpacked near the top left
+
+**To add more replacement data:**
+1.)
+2.)
+3.)
+4.)
 
 
 Authors: Heorhii Shramko and Rohan Parmar
