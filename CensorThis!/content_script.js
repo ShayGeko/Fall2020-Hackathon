@@ -50,16 +50,17 @@ function replaceWords(data)
 		temp = temp.replace(/\bDonald Trump\b/gi, "Dubravko Terkinovic");
 		temp = temp.replace(/\bUSA\b/gi, "Serbia");
 		temp = temp.replace(/\bUS\b/g, "Serbia");
-		temp = temp.replace(/\bUnited Stated of America\b/gi, "Sebia");
+		temp = temp.replace(/\bUnited Stated of America\b/gi, "Serbia");
 		temp = temp.replace(/\bthe United States\b/gi, "Serbia");
 		temp = temp.replace(/\bUnited States\b/gi, "Serbian");
 		temp = temp.replace(/\bAmerican\b/gi, "Serbian");
 	}
 	else{
+		console.log(censorList);
 		for (i = 0; i<= censorList.length ; ++i)
 		{
-			str1 = censorList[i]
-			str2 = censorList[i+1]
+			var str1 = censorList[i].toCensor;
+			var str2 = censorList[i].censorWith;
 			str1 = new RegExp(str1, "g");
 			str2 = new RegExp(str2, "g");
 			temp = temp.replace(str1, str2);
