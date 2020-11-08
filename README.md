@@ -1,8 +1,8 @@
-#**Fall 2020 - Hackathon** 
+# **Fall 2020 - Hackathon** 
 
-##*7th November 2020*
+## *7th November 2020*
 
-###*SFU CSSS Hackathon*
+### *SFU CSSS Hackathon*
 
 **Build Instructions:**
 
